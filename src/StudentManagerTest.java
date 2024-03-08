@@ -1,12 +1,12 @@
 import org.junit.jupiter.api.Test;
-
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class StudentManagerTest {
 
     @Test
-    void testAddStudent() {
+    void testUpdateStudent() {
         StudentManager studentManager = new StudentManager();
-        assertTrue(studentManager.addStudent("John", "Doe", "12345"));
+        studentManager.addStudent("John", "Doe", "12345");
+        assertTrue(studentManager.updateStudent("John", "Smith", "12345"));
     }
 }
