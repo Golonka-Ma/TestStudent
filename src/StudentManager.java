@@ -36,4 +36,19 @@ public class StudentManager {
         }
         return false;
     }
+
+    public double calculateAverageGrade(String subject) {
+        double sum = 0.0;
+        int count = 0;
+        for (ArrayList<Double> studentGrades : grades.values()) {
+            for (Double grade : studentGrades) {
+                sum += grade;
+                count++;
+            }
+        }
+        if (count > 0) {
+            return sum / count;
+        }
+        return 0.0;
+    }
 }
