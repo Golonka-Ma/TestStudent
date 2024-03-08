@@ -16,4 +16,12 @@ public class StudentManager {
         }
         return false;
     }
+
+    public boolean removeStudent(String studentId) {
+        if (students.containsKey(studentId)) {
+            students.remove(studentId);
+            return true;
+        }
+        return false;
+    }
 }
